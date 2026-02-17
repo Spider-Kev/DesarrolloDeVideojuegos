@@ -6,9 +6,10 @@ public class BulletBehavior : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Enemy>())
+        if (collision.gameObject.TryGetComponent<IDamagable>
+            (out var damagableObject))
         {
-            Debug.Log("Choque con un enemigo");
+            damagableObject.ReceiveDamage();
         }
         gameObject.SetActive(false);
     }
@@ -18,3 +19,4 @@ public class BulletBehavior : MonoBehaviour
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 }
+
