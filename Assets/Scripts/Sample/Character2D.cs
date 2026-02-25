@@ -5,7 +5,7 @@ public class Character2D : MonoBehaviour
     public Rigidbody2D rb;
     public float jumpForce = 10f;
     public Transform shootPoint;
-
+    
     public Pooling pooling;
 
     // Update is called once per frame
