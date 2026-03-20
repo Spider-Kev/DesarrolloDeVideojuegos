@@ -124,6 +124,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6801084492323941494, guid: a2576051c8080614e82a4380a800612c, type: 3}
   m_PrefabInstance: {fileID: 4968804721841480678}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &147482586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147482587}
+  - component: {fileID: 147482588}
+  m_Layer: 0
+  m_Name: PoolingParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &147482587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147482586}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1591532037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &147482588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147482586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe49e4c6c98ffc74788ccb1b12d1efba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createdObjects: []
+  prefabToCreate: {fileID: 0}
+  enemyToListen: {fileID: 758212596}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +472,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1591532037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758212596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7196828716926481423, guid: a2576051c8080614e82a4380a800612c, type: 3}
+  m_PrefabInstance: {fileID: 4968804721841480678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e21c0f7043c004a8b24bd9b138b7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,52 +716,6 @@ Transform:
   - {fileID: 532886405}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1432498997
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1432498998}
-  - component: {fileID: 1432498999}
-  m_Layer: 0
-  m_Name: PoolParticles
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1432498998
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432498997}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2001716743}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1432498999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432498997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b557091e395cb674a809c541efb75c64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createdObjects: []
-  prefabToCreate: {fileID: 6786970140157804074, guid: 25cecc8937286b44f8ec469ef61cecec, type: 3}
 --- !u!1 &1591532032
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +895,7 @@ Transform:
   m_Children:
   - {fileID: 654004157}
   - {fileID: 1927215564}
+  - {fileID: 147482587}
   m_Father: {fileID: 1819674783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1626781763
@@ -1152,8 +1165,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1432498998}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4968804721841480678
@@ -1211,7 +1223,7 @@ PrefabInstance:
     - target: {fileID: 7196828716926481423, guid: a2576051c8080614e82a4380a800612c, type: 3}
       propertyPath: poolingParticles
       value: 
-      objectReference: {fileID: 1432498999}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

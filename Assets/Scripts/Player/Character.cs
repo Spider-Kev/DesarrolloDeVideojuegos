@@ -43,6 +43,7 @@ public class Character : MonoBehaviour
 
         GameObject newObject = new GameObject();
         Destroy( newObject );
+        
     }
 }
 

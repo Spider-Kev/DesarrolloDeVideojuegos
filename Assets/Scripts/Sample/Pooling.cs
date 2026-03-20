@@ -5,7 +5,7 @@ public class Pooling : MonoBehaviour
 {
     public List<GameObject> createdObjects;
     public GameObject prefabToCreate;
-
+    
     void Start()
     {
         createdObjects = new List<GameObject> ();
@@ -28,5 +28,10 @@ public class Pooling : MonoBehaviour
         createdObjects.Add(Instantiate(prefabToCreate,
             _transform.position,
             Quaternion.identity));
+    }
+
+    protected virtual void Function()
+    {
+        Debug.Log("Algo");
     }
 }
